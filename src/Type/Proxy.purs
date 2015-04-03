@@ -25,7 +25,27 @@
 -- |
 -- | We can now call `responseType (Proxy :: Proxy SomeContentType)` to produce
 -- | a `ResponseType` for `SomeContentType` without having to construct some
--- | empty version of `SomeContentType` first.
+-- | empty version of `SomeContentType` first. In situations like this where
+-- | the `Proxy` type can be statically determined, it is recommended to pull
+-- | out the definition to the top level and make a declaration like:
+-- |
+-- | ``` purescript
+-- | _SomeContentType :: Proxy SomeContentType
+-- | _SomeContentType = Proxy
+-- | ```
+-- |
+-- | That way the proxy value can be used as `responseType _SomeContentType`
+-- | for improved readability. However, this is not always possible, sometimes
+-- | the type required will be determined by a type variable. As PureScript has
+-- | scoped type variables, we can do things like this:
+-- |
+-- | ``` purescript
+-- | makeRequest :: URL -> ResponseType -> Aff _ Foreign
+-- | makeRequest = ...
+-- |
+-- | fetchData :: forall a. (AjaxResponse a) => URL -> Aff _ a
+-- | fetchData url = fromResponse <$> makeRequest url (responseType (Proxy :: Proxy a))
+-- | ```
 module Type.Proxy where
 
 -- | Value proxy for kind `*` types.
