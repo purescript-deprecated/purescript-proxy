@@ -2,10 +2,11 @@
   "name": "purescript-proxy",
   "homepage": "https://github.com/purescript/purescript-proxy",
   "description": "Value proxy for type inputs",
-  "keywords": [
-    "purescript"
-  ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-proxy.git"
+  },
   "ignore": [
     "**/.*",
     "bower_components",
