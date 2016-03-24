@@ -11,6 +11,6 @@ Value proxy for type inputs.
 bower install purescript-proxy
 ```
 
-## Module documentation
+## Documentation
 
-- [Type.Proxy](docs/Type/Proxy.md)
+Module documentation is [published on Pursuit](http://pursuit.purescript.org/packages/purescript-proxy).
