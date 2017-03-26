@@ -48,11 +48,11 @@
 -- | ```
 module Type.Proxy where
 
--- | Value proxy for kind `*` types.
+-- | Value proxy for kind `Type` types.
 data Proxy a = Proxy
 
--- | Value proxy for kind `* -> *` types.
-data Proxy2 (a :: * -> *) = Proxy2
+-- | Value proxy for kind `Type -> Type` types.
+data Proxy2 (a :: Type -> Type) = Proxy2
 
--- | Value proxy for kind `* -> * -> *` types.
-data Proxy3 (a :: * -> * -> *) = Proxy3
+-- | Value proxy for kind `Type -> Type -> Type` types.
+data Proxy3 (a :: Type -> Type -> Type) = Proxy3
