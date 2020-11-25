@@ -1,16 +1,5 @@
-# purescript-proxy
+# DEPRECATED
 
-[![Latest release](http://img.shields.io/bower/v/purescript-proxy.svg)](https://github.com/purescript/purescript-proxy/releases)
-[![Build Status](https://travis-ci.org/purescript/purescript-proxy.svg?branch=master)](https://travis-ci.org/purescript/purescript-proxy)
+The library has been deprecated as of the PureScript 0.14 compiler release. The `Proxy` type has been migrated into the [`purescript-prelude`](https://github.com/purescript/purescript-prelude) library instead.
 
-Value proxy for type inputs.
-
-## Installation
-
-```
-bower install purescript-proxy
-```
-
-## Documentation
-
-Module documentation is [published on Pursuit](http://pursuit.purescript.org/packages/purescript-proxy).
+[The previous releases](https://github.com/purescript-deprecated/purescript-proxy/releases) will continue to work for older libraries that still depend on them.

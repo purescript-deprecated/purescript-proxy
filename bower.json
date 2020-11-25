@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git://github.com/purescript/purescript-proxy.git"
   },
+  "keywords": ["pursuit-deprecated"],
   "ignore": [
     "**/.*",
     "bower_components",
